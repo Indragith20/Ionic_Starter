@@ -1,0 +1,8 @@
+{
+  "name": "ionic-linkedin-2",
+  "app_id": "46038619",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

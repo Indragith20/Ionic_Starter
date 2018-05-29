@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-navbar color="primary" no-border-bottom>
+    <ion-buttons start>
+      <button ion-button icon-only (click)="goToProfile()">
+        <ion-avatar>
+          <img class="rounded thumb-xxs b b-white" src="assets/img/hieu.png">
+        </ion-avatar>
+      </button>
+    </ion-buttons>
+
+    <ion-searchbar placeholder="Search" (ionFocus)="goToSearch()"></ion-searchbar>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-muted">
+  <div class="bg-white wrapper-xs m-b-sm">
+    <ion-row text-center class="text-muted">
+      <ion-col class="b-r b-light" (click)="openConnections()">
+        <div class="text-xl font-thin">605</div>
+        <div class="">
+          View connections
+        </div>
+      </ion-col>
+      <ion-col (click)="openConnections()">
+        <ion-icon class="text-2x" name="contact"></ion-icon>
+        <div>
+          Add contacts
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="bg-white m-b-sm">
+    <div class="wrapper b-b b-light">
+      Invitations
+    </div>
+
+    <ion-row class="wrapper-sm b-b b-light" *ngFor="let i of [0,1]">
+      <ion-col col-auto>
+        <ion-avatar item-start>
+          <demo-avatar [sizeClass]="'thumb'"></demo-avatar>
+        </ion-avatar>
+      </ion-col>
+      <ion-col class="text-ellipsis-flex">
+        <div class="l-h">
+          <div class="font-bold text-ellipsis">Ryan Reynold {{postIndex}}</div>
+          <div class="text-sm text-muted text-ellipsis">VP of Human Resource, SML</div>
+          <div class="text-xs text-muted">
+            <ion-icon name="ios-infinite"></ion-icon>
+            8 mutual connections
+          </div>
+        </div>
+      </ion-col>
+      <ion-col col-auto align-self-center>
+        <ion-icon class="text-3x text-muted" name="ios-close-circle-outline"></ion-icon>
+        <ion-icon class="text-3x" name="ios-checkmark-circle-outline" color="primary"></ion-icon>
+      </ion-col>
+    </ion-row>
+
+    <div class="wrapper text-center font-bold">
+      <div ion-text color="primary">
+        Manage All
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white m-b-sm">
+    <div class="wrapper b-b b-light">
+      People you may know
+    </div>
+
+    <ion-row text-center>
+      <ion-col col-6 *ngFor="let i of [0,1,2,3,4,5]" class="b-r b-b b-light">
+        <div class="wrapper-sm pos-rlt">
+          <ion-icon name="md-close" color="muted" class="pos-abt top right"></ion-icon>
+          <ion-avatar item-start>
+            <demo-avatar [sizeClass]="'thumb-md'"></demo-avatar>
+          </ion-avatar>
+          <div class="l-h m-b-sm">
+            <div class="font-bold">Ryan Reynold {{postIndex}}</div>
+            <div class="text-sm text-muted">VP of Human Resource, SML</div>
+            <div class="text-xxs text-muted">
+              <ion-icon name="ios-infinite"></ion-icon>
+              8 mutual connections
+            </div>
+          </div>
+          <button ion-button outline primary small>
+            <b>Connect</b>
+          </button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

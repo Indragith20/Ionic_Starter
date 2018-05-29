@@ -1,0 +1,57 @@
+<ion-header>
+
+  <ion-navbar color="primary" no-border-bottom>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar color="white" class="my-toolbar no-padder">
+    <ion-segment mode="md" [(ngModel)]="activeSegment">
+      <ion-segment-button value="0">
+        Account
+      </ion-segment-button>
+      <ion-segment-button value="1">
+        Privacy
+      </ion-segment-button>
+      <ion-segment-button value="2">
+        Communications
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <h3>Email addresses</h3>
+      <div class="text-muted text-sm">Add or remove email addresses on your account</div>
+    </ion-item>
+    <ion-item>
+      <h3>Phone numbers</h3>
+      <div class="text-muted text-sm">Add a phone number to help keep your account secure</div>
+    </ion-item>
+    <ion-item>
+      <h3>Change password</h3>
+      <div class="text-muted text-sm">Choose a unique password to protect your account</div>
+    </ion-item>
+    <ion-item>
+      <h3>Video Autoplay</h3>
+      <div class="text-muted text-sm">Choose when to autoplay videos</div>
+    </ion-item>
+    <ion-item>
+      <h3>Sync contacts</h3>
+      <div class="text-muted text-sm">Automatically find people you know</div>
+    </ion-item>
+    <ion-item>
+      <h3>Sync calendar</h3>
+      <div class="text-muted text-sm">Automatically sync your calender</div>
+    </ion-item>
+    <ion-item>
+      <h3>Feed preferences</h3>
+      <div class="text-muted text-sm">Make your feed your own</div>
+    </ion-item>
+    <ion-item>
+      <h3>Try Premium for free</h3>
+      <div class="text-muted text-sm">Unlock the power of LinkedIn</div>
+    </ion-item>
+  </ion-list>
+</ion-content>

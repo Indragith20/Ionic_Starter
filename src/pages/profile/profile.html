@@ -1,0 +1,390 @@
+<ion-header>
+  <ion-navbar color="primary" no-border-bottom>
+    <ion-searchbar placeholder="Search"></ion-searchbar>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="goToSettings()">
+        <ion-icon name="ios-settings"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-muted">
+  <div class="wrapper-sm has-fab-bottom">
+    <div class="profile-cover" [style.backgroundImage]="'url(assets/img/photo2.png)'"></div>
+
+    <div class="bg-white wrapper text-center has-avatar-raised m-b-sm">
+      <ion-avatar class="avatar-raised">
+        <demo-avatar [sizeClass]="'thumb-xl b-white b b-3x box-shadow'"></demo-avatar>
+      </ion-avatar>
+
+      <div class="l-h m-b">
+        <div class="text-lg">Hieu Pham</div>
+        <div class="">Internet Product Lover</div>
+        <div class="text-muted text-xs">Singapore · 500+ <ion-icon name="md-people"></ion-icon></div>
+      </div>
+
+      <div class="text-sm">I'm a UI/UX lover. I see nice UI, I clone. <br/>That's it.</div>
+    </div>
+
+    <div class="bg-primary-lighter wrapper-sm m-b-sm">
+      <div class="color-white">
+        <ion-row>
+          <ion-col>
+            <div class="text-md">Your dashboard</div>
+            <div class="text-xs"><i>Private to you</i></div>
+          </ion-col>
+          <ion-col col-auto align-self-center>
+            <div class="font-bold text-sm">
+              <ion-icon name="md-star-outline"></ion-icon>
+              ALL-STAR
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <ion-row class="r bg-white m-b-sm">
+        <ion-col class="b-r b-light wrapper-sm">
+          <div ion-text color="primary" class="text-lg">
+            38
+          </div>
+          <div class="text-xxs text-muted">
+            Who viewed your profile
+          </div>
+        </ion-col>
+        <ion-col class="b-r b-light wrapper-sm">
+          <div ion-text color="primary" class="text-lg">
+            146
+          </div>
+          <div class="text-xxs text-muted">
+            Who viewed your profile
+          </div>
+        </ion-col>
+        <ion-col class="wrapper-sm">
+          <div ion-text color="primary" class="text-lg">
+            38
+          </div>
+          <div class="text-xxs text-muted">
+            Who viewed your profile
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <div class="bg-white r">
+        <ion-row class="b-b b-light wrapper-sm">
+          <ion-col col-auto>
+            <ion-icon name="ios-briefcase-outline"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <div class="font-bold">
+              Career interests
+            </div>
+            <div class="text-muted text-xs">
+              Connect with recuiters and relevant opportunities
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="b-b b-light wrapper-sm">
+          <ion-col col-auto>
+            <ion-icon name="ios-briefcase-outline"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <div class="font-bold">
+              Saved items (1)
+            </div>
+            <div class="text-muted text-xs">
+              Save interesting articles and jobs for later
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+
+    <div class="bg-white m-b-sm">
+      <div class="wrapper-sm">
+        <div>Your articles</div>
+        <div class="text-xs text-muted">
+          605 Followers
+        </div>
+      </div>
+
+      <post-attachment type="url"></post-attachment>
+
+      <div class="line b-b b-light"></div>
+
+      <div class="wrapper-sm b-b b-light">
+        <div class="m-b">Activity</div>
+
+        <ion-row *ngFor="let i of [0,1]">
+          <ion-col col-auto>
+            <ion-avatar>
+              <demo-avatar [sizeClass]="'thumb-sm'"></demo-avatar>
+            </ion-avatar>
+          </ion-col>
+          <ion-col>
+            <div class="font-bold">Something cool in the industry but nobody cares</div>
+            <div class="text-muted text-xs">Hieu likes this</div>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="wrapper text-center font-bold">
+        <div ion-text color="primary">
+          See more
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white m-b-sm">
+      <div class="wrapper-sm">
+        <div class="m-b">Experience</div>
+      </div>
+
+      <ion-row class="wrapper-sm b-b b-light" *ngFor="let i of [0,1,2]; let postIndex = index">
+        <ion-col col-auto>
+          <ion-avatar item-start>
+            <img class="thumb-sm" src="assets/img/company.png">
+          </ion-avatar>
+        </ion-col>
+        <ion-col class="text-ellipsis-flex">
+          <div class="l-h">
+            <div class="font-bold">UI/UX lover</div>
+            <div class="text-sm text-muted text-ellipsis">Marvel Universe Corp</div>
+            <div class="text-xxs text-muted">
+              Dec 2013 - Present · 4yrs 1 mo
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <div class="wrapper-sm">
+        <div class="m-b">Education</div>
+      </div>
+
+      <ion-row class="wrapper-sm b-b b-light" *ngFor="let i of [0,1]; let postIndex = index">
+        <ion-col col-auto>
+          <ion-avatar item-start>
+            <img class="thumb-sm" src="assets/img/company.png">
+          </ion-avatar>
+        </ion-col>
+        <ion-col class="text-ellipsis-flex">
+          <div class="l-h">
+            <div class="font-bold">X Gifted Highschool</div>
+            <div class="text-sm text-muted text-ellipsis">Mutants Researcher</div>
+            <div class="text-xxs text-muted">
+              2006 - 2011
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <div class="wrapper text-center font-bold">
+        <div ion-text color="primary">
+          See more
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white m-b-sm">
+      <div class="wrapper-sm">
+        <div>Featured Skills & Endorsements</div>
+      </div>
+
+      <div class="wrapper-sm m-b-sm" *ngFor="let i of [0,1]">
+        <ion-chip>
+          <ion-label class="text-xs">
+            <div class="font-bold">Javascript <span class="text-muted"> · 25</span></div>
+          </ion-label>
+        </ion-chip>
+        <ion-row>
+          <ion-col col-auto>
+            <ion-avatar item-start>
+              <demo-avatar [sizeClass]="'thumb-xxxs'"></demo-avatar>
+            </ion-avatar>
+          </ion-col>
+          <ion-col align-self-center>
+            <div class="text-xs text-muted">Endorsed by Wolverines, Mystique</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-auto>
+            <ion-avatar item-start>
+              <demo-avatar [sizeClass]="'thumb-xxxs'"></demo-avatar>
+            </ion-avatar>
+          </ion-col>
+          <ion-col align-self-center>
+            <div class="text-xs text-muted">Endorsed by 2 of your colleagues</div>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="wrapper text-center font-bold">
+        <div ion-text color="primary">
+          See 5 more skills
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white m-b-sm">
+      <div class="wrapper-sm">
+        <div>Accomplishments</div>
+      </div>
+
+      <div class="b-b b-light">
+        <ion-row>
+          <ion-col col-auto>
+            <div class="text-2x font-thin" ion-text color="primary">
+              <div class="padder-sm">9</div>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="text-u-c font-bold m-b-xs" ion-text color="primary">
+              <span class="b-b b-light">PROJECTS</span>
+            </div>
+            <div class="text-sm text-muted">One of the most awesome company</div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col col-auto>
+            <div class="text-2x font-thin" ion-text color="primary">
+              <div class="padder-sm">2</div>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="text-u-c font-bold m-b-xs" ion-text color="primary">
+              <span class="b-b b-light">CERTIFICATIONS</span>
+            </div>
+            <div class="text-sm text-muted">Duolingo French Fluency: Advanced (Estimated)</div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col col-auto>
+            <div class="text-2x font-thin" ion-text color="primary">
+              <div class="padder-sm">1</div>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="text-u-c font-bold m-b-xs" ion-text color="primary">
+              <span class="b-b b-light">PUBLICATIONS</span>
+            </div>
+            <div class="text-sm text-muted">[Book translation] Digital Nomad</div>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="wrapper text-center font-bold">
+        <ion-icon name="ios-arrow-down"></ion-icon>
+      </div>
+    </div>
+
+    <div class="bg-white m-b-sm">
+      <div class="wrapper-sm">
+        <div>Hieu is available for...</div>
+      </div>
+
+      <ion-list class="m-n">
+        <ion-item class="b-none">
+          <ion-icon name="ios-chatbubbles-outline" color="primary" item-start></ion-icon>
+          <h3>
+            Getting coffee
+          </h3>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="empty" item-start></ion-icon>
+          <h3>
+            Contracting and freelancing
+          </h3>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="empty" item-start></ion-icon>
+          <h3>
+            Paid consulting
+          </h3>
+        </ion-item>
+      </ion-list>
+
+      <div class="wrapper-sm">
+        <div>Contact</div>
+      </div>
+
+      <ion-list class="m-n">
+        <ion-item class="b-none">
+          <ion-icon name="logo-linkedin" item-start></ion-icon>
+          <h3>
+            <div class="font-bold">Getting coffee</div>
+          </h3>
+          <p>linkedin.com/in/hieupv</p>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="md-mail" item-start></ion-icon>
+          <h3>
+            <div class="font-bold">Email</div>
+          </h3>
+          <p>mr_hie@yahoo.com</p>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="ios-chatboxes" item-start></ion-icon>
+          <h3>
+            <div class="font-bold">IM</div>
+          </h3>
+          <p>Mr_hie (Skype)</p>
+        </ion-item>
+      </ion-list>
+
+      <div class="wrapper text-center font-bold">
+        <div ion-text color="primary">
+          See more
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white m-b-sm">
+      <div class="wrapper-sm">
+        <div>Interests</div>
+      </div>
+      <div class="wrapper-sm b-b b-light">
+        <ion-avatar class="inline m-r-sm" *ngFor="let i of [0,1,2,3,4]">
+          <img class="thumb-sm" src="assets/img/company.png">
+        </ion-avatar>
+      </div>
+      <div class="wrapper text-center font-bold">
+        <div ion-text color="primary">
+          See more
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-primary-darker m-b-sm color-white">
+      <div class="wrapper-sm text-center">
+        <div>People Also Viewed</div>
+      </div>
+
+      <ion-row class="wrapper-sm b-b b-light" *ngFor="let i of [0,1,2,3,4,5,6,7,8]">
+        <ion-col col-auto>
+          <ion-avatar item-start>
+            <demo-avatar [sizeClass]="'thumb-sm'"></demo-avatar>
+          </ion-avatar>
+        </ion-col>
+        <ion-col class="text-ellipsis-flex">
+          <div class="l-h">
+            <div class="font-bold text-ellipsis">Ryan Reynold {{postIndex}} <span class="text-muted font-normal">· 1st</span></div>
+            <div class="text-sm text-muted text-ellipsis">VP of Human Resource, SML</div>
+            <div class="text-xxs text-muted">
+              <ion-icon name="ios-pin-outline"></ion-icon>
+              Hanoi, Vietnam
+            </div>
+          </div>
+        </ion-col>
+        <ion-col col-auto align-self-center>
+          <ion-icon class="text-lg text-muted" name="ios-chatboxes-outline"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </div>
+
+  </div>
+</ion-content>
+
+<button ion-fab class="button-fab"><ion-icon name="ios-add"></ion-icon></button>
